@@ -1,4 +1,4 @@
-; Hello World in NASM assembly
+; M J M M in NASM assembly
 
 global _start           ; expose program entry point
 
@@ -6,7 +6,7 @@ section .text           ; start of code segment
 
 _start:
 
-    ; Write "Hello World!" to the console
+    ; Write "M J M M" to the console
     mov rax,1               ; system call for write 
     mov rdi,1               ; file handle for stdout
     mov rsi,hello_str       ; address of output string
@@ -20,7 +20,7 @@ _start:
 
 section .data           ; start of initialized data segment
 
-    hello_str db "Hello World!",0xa     ; output string with newline
+    hello_str db "M J M M",0xa     ; output string with newline
     hello_str_len equ $-hello_str       ; size of output string 
 
 section .bss            ; start of uninitialized data segment 
